@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AARAMBHA Typing Competition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>AARAMBHA 2026</h1>
+    <h2>Typing Competition</h2>
+
+    <h3 id="countdown"></h3>
+
+    <h1 id="startCountdown"></h1>
+
+    <div class="studentDetails">
+
+        <div class="inputBox">
+            <label>Name</label>
+            <input type="text" id="name" placeholder="Name">
+        </div>
+
+        <div class="inputBox">
+            <label>USN</label>
+            <input type="text" id="usn" placeholder="USN">
+        </div>
+
+        <div class="inputBox">
+            <label>Division</label>
+            <input type="text" id="division" placeholder="Division">
+        </div>
+
+        <div class="inputBox">
+            <label>Branch</label>
+            <input type="text" id="branch" placeholder="Branch">
+        </div>
+
+        <div class="inputBox fullWidth">
+            <label>Phone Number</label>
+            <input type="tel" id="phone" placeholder="Phone Number">
+        </div>
+
+    </div>
+
+    <div class="paragraph hidden" id="paragraph"></div>
+
+    <textarea
+    class="hidden"
+    id="input"
+    placeholder="Start typing here..."
+    autocomplete="new-password"
+    autocorrect="off"
+    autocapitalize="off"
+    spellcheck="false"
+    aria-autocomplete="none"
+    inputmode="text">
+    </textarea>
+
+    <div class="bottom">
+
+        <p>⏰ Time Left: <span id="time">120</span>s</p>
+
+        <p>⚡ WPM: <span id="liveWpm">0</span></p>
+
+        <p>🎯 Accuracy: <span id="liveAccuracy">100</span>%</p>
+
+        <button id="startBtn">Start Test</button>
+
+    </div>
+
+    <div id="result"></div>
+
+    <div class="leaderboard">
+
+        <h2>🏆 Leaderboard</h2>
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Name</th>
+                    <th>WPM</th>
+                    <th>Accuracy</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="leaderboardBody">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
