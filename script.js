@@ -260,6 +260,8 @@ function calculateResult(){
     `;
 
     leaderboardBody.innerHTML += row;
+  
+    saveResult(wpm, accuracy);
 }
 // Disable Right Click
 document.addEventListener("contextmenu", (e) => {
@@ -311,3 +313,25 @@ input.addEventListener("keydown", (e) => {
     }
 
 });
+function saveResult(wpm, accuracy) {
+
+    const data = {
+        name: document.getElementById("name").value,
+        usn: document.getElementById("usn").value,
+        division: document.getElementById("division").value,
+        branch: document.getElementById("branch").value,
+        phone: document.getElementById("phone").value,
+        wpm: wpm,
+        accuracy: accuracy
+    };
+
+    fetch("https://script.google.com/macros/s/AKfycby9ndwQIxywM56yrNT5n-6DORRQakmYgPsWfjvZ4UldRH7qUoZXECUeBXBlLJOQ-GJxsg/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    });
+
+}
