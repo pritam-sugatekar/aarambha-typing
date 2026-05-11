@@ -325,7 +325,7 @@ function saveResult(wpm, accuracy) {
         accuracy: accuracy
     };
 
-    fetch("https://script.google.com/macros/s/AKfycby9ndwQIxywM56yrNT5n-6DORRQakmYgPsWfjvZ4UldRH7qUoZXECUeBXBlLJOQ-GJxsg/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzM1bmmBuPYEA_KYA_qvzvu0Zr27P1y1CBz6qVgCisTOi5sHqw5ixNyeRrjMLJqANoINQ/exec", {
         method: "POST",
         mode: "no-cors",
         headers: {
